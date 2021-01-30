@@ -1,0 +1,68 @@
+html
+    head
+        title signin
+        script(src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js")
+        script(src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js")
+        link(type="text/css", rel="stylesheet", href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css")
+        //- script(src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js")
+        //- link(type="text/css", rel="stylesheet", href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css")
+        script.
+            const firebaseConfig = {
+                apiKey: "AIzaSyCk6RQWsyyHqqvPYXJkvqaBpjlpwmX2Mio",
+                authDomain: "sharitys-d1b14.firebaseapp.com",
+                databaseURL: "https://sharitys-d1b14-default-rtdb.firebaseio.com",
+                projectId: "sharitys-d1b14",
+                storageBucket: "sharitys-d1b14.appspot.com",
+                messagingSenderId: "348451380114",
+                appId: "1:348451380114:web:8ef83c7edb6962fbc07f4b",
+                measurementId: "G-5JEWXSF5R4"
+            };
+            firebase.initializeApp(firebaseConfig)
+            firebase.auth().setPersistence(
+                firebase.auth.Auth.Persistence.NONE
+            )
+            
+            var uiConfig = {
+                callbacks: {
+                    signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+                    // User successfully signed in.
+                    // Return type determines whether we continue the redirect automatically
+                    // or whether we leave that to developer to handle.
+                    return true;
+                    },
+                    uiShown: function() {
+                    // The widget is rendered.
+                    // Hide the loader.
+                    document.getElementById('loader').style.display = 'none';
+                    }
+                },
+                // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+                signInFlow: 'popup',
+                signInSuccessUrl: '/signinsuccess',
+                signInOptions: [ 
+                    // Google sign in option 
+                    firebase.auth.GoogleAuthProvider.PROVIDER_ID, 
+                    firebase.auth.EmailAuthProvider.PROVIDER_ID
+                ], 
+            
+                // Terms of service url/callback. 
+                tosUrl: '<your-tos-url>', 
+            
+                // Privacy policy url/callback. 
+                privacyPolicyUrl: function () { 
+                    window.location.assign('/<your-privacy-policy-url>'); 
+                } 
+            }
+            // Initialize the FirebaseUI Widget using Firebase. 
+            var ui = new firebaseui.auth.AuthUI(firebase.auth()); 
+            
+            // The start method will wait until the DOM is loaded. 
+            ui.start('#firebaseui-auth-container', uiConfig); 
+
+
+    body
+        h1(align='center') Sharitys sign in page
+        div(id='firebaseui-auth-container')
+        div(id='loader') loading...
+        
+        

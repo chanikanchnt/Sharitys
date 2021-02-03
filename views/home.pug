@@ -1,0 +1,14 @@
+html
+    head
+        title Sharitys - home
+        script(src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js")
+        script(src="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.js")
+        link(type="text/css", rel="stylesheet", href="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.css")
+        style
+            include style.css
+        script
+            include firebaseConfig.js
+    body
+        button#signin-with-redirect Sign in
+        script
+            include home.js

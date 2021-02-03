@@ -20,14 +20,16 @@ app.get('/', (req,res) => {
     res.render('index')
 })
 
+app.get('/home', (req,res) => {
+    res.render('home')
+})
+
 app.get('/signin', (req,res) => {
     res.render('signin')
-    // TODO create user
 })
 
 app.get('/signinsuccess', (req,res) => {
     res.render('signinsuccess')
-    console.log(req.decodedClaims.uid)
 })
 
 app.get('/signout', (req,res) => {

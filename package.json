@@ -2,9 +2,10 @@
   "name": "sharitys",
   "version": "1.0.0",
   "description": "sharitys v1.0.0",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon server.js -w server"
   },
   "repository": {
     "type": "git",
@@ -17,13 +18,18 @@
   },
   "homepage": "https://github.com/chanikanchnt/Sharitys#readme",
   "dependencies": {
+    "consolidate": "^0.16.0",
     "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "firebase": "^8.2.4",
     "firebase-admin": "^9.4.2",
     "firebaseui": "^4.7.1",
     "fs": "0.0.1-security",
-    "https": "^1.0.0"
+    "https": "^1.0.0",
+    "mssql": "^6.3.1",
+    "mysql": "^2.18.1",
+    "pug": "^3.0.0",
+    "swig": "^1.4.2"
   },
-  "devDependencies": {}
+    "devDependencies": {}
 }

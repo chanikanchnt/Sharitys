@@ -1,0 +1,7 @@
+Naming Protocol
+- url
+1. camel case e.g. googleSignin, signinSuccess
+- html element
+1. separate with - e.g. signin-with-popup
+- function name
+1. camel case

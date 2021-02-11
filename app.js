@@ -36,6 +36,36 @@ app.get('/signout', (req,res) => {
     res.render('signout')
 }) 
 
+app.use(express.static('Design_Material'));
+
+app.get('/viewallpj', (req,res) => {
+    res.render('All_Project')
+}) 
+
+app.get('/createpj', (req,res) => {
+    res.render('Create_Project')
+}) 
+
+app.get('/editpj', (req,res) => {
+    res.render('Edit_Project')
+}) 
+
+app.get('/donatest', (req,res) => {
+    res.render('Donate_Status')
+}) 
+
+app.get('/giftlist', (req,res) => {
+    res.render('Gift_List')
+}) 
+
+app.get('/progress', (req,res) => {
+    res.render('Progress_Update')
+}) 
+
+app.get('/pjdescription', (req,res) => {
+    res.render('Project_Description')
+}) 
+
 app.listen(PORT, () => {
     console.log(`Server is running on port : ${PORT}`)
 })

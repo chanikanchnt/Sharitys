@@ -1,0 +1,273 @@
+html
+    head
+        style
+             include style.css
+
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+title All Project
+link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm", crossorigin="anonymous")
+link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+script(src="script.js", async)
+nav.navbar.navbar-expand-lg.navbarSecond.navbar-light.py-lg-3
+  a.navbar-brand.Sharitys(href="#") Sharitys
+  button.navbar-toggler(data-toggle="collapse", data-target="#userNavBar")
+    span.navbar-toggler-icon
+  .collapse.navbar-collapse#userNavBar
+    ul.navbar-nav.nav-fill.w-100
+      li.nav-item
+        a.nav-link.NavFont(href="#") หน้าแรก
+      li.nav-item.dropdown
+        a.nav-link.dropdown-toggle.NavFont#navbarDropdown(href="#", role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") ประเภทโครงการ
+        .dropdown-menu(aria-labelledby="navbarDropdown")
+          a.dropdown-item.NavFont(href="/viewallpj") โครงการทั้งหมด
+          a.dropdown-item.NavFont(href="#") โครงการที่เร่งด่วน
+          a.dropdown-item.NavFont(href="#") โครงการเพื่อช่วยแก้ไขปัญหา
+          a.dropdown-item.NavFont(href="#") โครงการในเชิงประดิษฐ์
+      li.nav-item
+        a.nav-link.NavFont(href="#") เกี่ยวกับเรา
+      li.nav-item
+        a.nav-link.NavFont(href="#") คำถามที่พบบ่อย
+      li.nav-item
+        a.nav-link.NavFont(href="#") ข้อกำหนดและเงื่อนไข
+      li.nav-item.dropdown
+        a.nav-link.dropdown-toggle.NavFont#navbarDropdown(href="#", role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") จัดการโครงการ
+        .dropdown-menu(aria-labelledby="navbarDropdown")
+          a.dropdown-item.NavFont(href="/createpj") สร้างโครงการ
+          a.dropdown-item.NavFont(href="#") โปรโมทโครงการ
+      li.nav-item
+        a.nav-link.NavFont(href="#") ถอนเงิน
+      li.nav-item
+        span.align-middle
+          i.fa.fa-search.fa-lg
+      li.nav-item
+        form.form-line.SearchBox
+          input.form-control.mr-sm-2.NavFont(type="search", placeholder="Search...", aria-label="Search")
+      li.nav-item
+        a.nav-link(href="#")
+          span.align-middle
+            i.fa.fa-bell.fa-lg
+      li.nav-item
+        a.nav-link(href="#")
+          span.align-middle
+            i.fa.fa-user-circle.fa-lg
+      li.nav-item
+        a.nav-link.LoginButton(href="#") Login
+.container
+  br
+  br
+  .row.justify-content-center
+    .col-7
+      h1 โครงการระดมทุนซื้อเครื่องมือการแพทย์เพื่อบริจาคให้โรงพยาบาล A
+.container
+  br
+  br
+  .row.justify-content-center
+    .col-auto
+      h5
+        a.Menu.CurrentMenu(href="/pjdescription") รายละเอียดโครงการ
+    .col-auto
+      h5.Menu.MenuGrid |
+    .col-auto
+      h5
+        a.Menu.Bordered(href="/progress") ความคืบหน้าโครงการ
+    .col-auto
+      h5.Menu.MenuGrid |
+    .col-auto
+      h5
+        a.Menu.Bordered(href="/donatest") สถานะการบริจาค
+    .col-auto
+      h5.Menu.MenuGrid |
+    .col-auto
+      h5
+        a.Menu.Bordered(href="/giftlist") ของขวัญ
+    .col-auto
+      h5.Menu.MenuGrid |
+    .col-auto
+      h5
+        a.Menu(href="/editpj") แก้ไขโครงการ
+br
+.container
+  br
+  .row
+    .col-1
+    .col-auto
+      h2 รายละเอียดโครงการ
+  br
+  .row
+    .col-1
+    .col-2
+      h5.EditQuestion ชื่อโครงการ
+    .col-8
+      form.form-line
+        input.form-control(type="text", aria-label="ProgressName")
+    .col-1
+  br
+  .row
+    .col-1
+    .col-2
+      h5.EditQuestion คำบรรยายรายละเอียด
+    .col-8
+      form.form-line
+        textarea.form-control(rows="3")
+    .col-1
+  br
+  .row
+    .col-1
+    .col-2
+      h5.EditQuestion ธนาคาร
+    .col-8
+      form.form-line
+        input.form-control(type="text", aria-label="ProgressName")
+    .col-1
+  br
+  .row
+    .col-1
+    .col-2
+      h5.EditQuestion เลขที่บัญชี
+    .col-8
+      form.form-line
+        input.form-control(type="text", aria-label="ProgressName")
+    .col-1
+  br
+  .row
+    .col-1
+    .col-2
+      h5.EditQuestion วันที่ปิดโครงการ
+    .col-8
+      form.form-line
+        input#start(type="date", value="2018-07-22", min="2018-01-01", max="2018-12-31")
+    .col-1
+  br
+  .row
+    .col-1
+    .col-2
+      h5.EditQuestion Facebook ของโครงการ
+    .col-8
+      form.form-line
+        input.form-control(type="text", aria-label="ProgressName")
+    .col-1
+  br
+  .row
+    .col-1
+    .col-2
+      h5.EditQuestion Twitter ของโครงการ
+    .col-8
+      form.form-line
+        input.form-control(type="text", aria-label="ProgressName")
+    .col-1
+  br
+  .row
+    .col-1
+    .col-2
+      h5.EditQuestion Instagram ของโครงการ
+    .col-8
+      form.form-line
+        input.form-control(type="text", aria-label="ProgressName")
+    .col-1
+.container
+  br
+  .row
+    .col-1
+    .col-auto
+      h5.EditQuestionGift ของที่ระลึก
+  .row
+    .col-1
+    .col-7
+      form.form-line
+        input.form-control(type="text", placeholder="ชื่อของที่ระลึก")
+    .col-3
+      form.form-line
+        input.form-control(type="text", placeholder="ราคาจำหน่าย (บาท)")
+    .col-1
+  .row
+    .col-1
+    .col-1
+      br
+      img.d-block.w-50(src="plus.png")
+.container
+  br
+  .row
+    .col-1
+    .col-auto
+      h5.EditQuestionGift ของขวัญตอบแทนการบริจาค
+  .row
+    .col-1
+    .col-7
+      form.form-line
+        input.form-control(type="text", placeholder="ชื่อของขวัญ")
+    .col-3
+      form.form-line
+        input.form-control(type="text", placeholder="ขั้นต่ำที่ได้รับบริจาค (บาท)")
+    .col-1
+  .row
+    .col-1
+    .col-1
+      br
+      img.d-block.w-50(src="plus.png")
+.container
+  br
+  br
+  .row
+    .col-1
+    .col-auto
+      h2 ข้อมูลเจ้าของโครงการ
+  br
+  .row
+    .col-1
+    .col-2
+      h5.EditQuestion ประเภทเจ้าของโครงการ*
+    .col-8
+      form.form-line
+        select
+          option(value="1") Let us pray to the Lord of mercy,
+          option(value="2") Who loves us tremendously,
+          option(value="3") Who graciously protects us,
+          option(value="4") Dear God, please grant us fortitude and strength,
+    .col-1
+  br
+  .row
+    .col-1
+    .col-2
+      h5.EditQuestion นามเจ้าของโครงการ*
+    .col-8
+      form.form-line
+        input.form-control(type="text")
+    .col-1
+  br
+  .row
+    .col-1
+    .col-2
+      h5.EditQuestion Email ที่ใช้แสดงบนหน้าโครงการ*
+    .col-8
+      form.form-line
+        input.form-control(type="text")
+    .col-1
+.container
+  br
+  .row.justify-content-center
+    .col-1
+      button.btn.btn-danger.btn-lg.EditProjectButton(type="button")
+        h6 บันทึก
+br
+footer.bg-light
+  .container
+    .row
+      .col-sm
+        h4 Footer
+        br
+        h6 test footer
+      .col-sm
+        h4 Test
+        br
+        h6 test footer
+      .col-sm
+        h4 Test
+        br
+        h6 test footer
+.text-center.p-3(style='background-color: rgba(0, 0, 0, 0.2)')
+    | &copy; 2021 Copyright:
+    a.text-dark(href='https://Sharitys.com/') Sharitys.com
+script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')

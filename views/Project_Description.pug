@@ -1,0 +1,197 @@
+html
+    head
+        style
+             include style.css
+
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+title All Project
+link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm", crossorigin="anonymous")
+link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+script(src="script.js", async)
+nav.navbar.navbar-expand-lg.navbarSecond.navbar-light.py-lg-3
+  a.navbar-brand.Sharitys(href="#") Sharitys
+  button.navbar-toggler(data-toggle="collapse", data-target="#userNavBar")
+    span.navbar-toggler-icon
+  .collapse.navbar-collapse#userNavBar
+    ul.navbar-nav.nav-fill.w-100
+      li.nav-item
+        a.nav-link.NavFont(href="#") หน้าแรก
+      li.nav-item.dropdown
+        a.nav-link.dropdown-toggle.NavFont#navbarDropdown(href="#", role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") ประเภทโครงการ
+        .dropdown-menu(aria-labelledby="navbarDropdown")
+          a.dropdown-item.NavFont(href="/viewallpj") โครงการทั้งหมด
+          a.dropdown-item.NavFont(href="#") โครงการที่เร่งด่วน
+          a.dropdown-item.NavFont(href="#") โครงการเพื่อช่วยแก้ไขปัญหา
+          a.dropdown-item.NavFont(href="#") โครงการในเชิงประดิษฐ์
+      li.nav-item
+        a.nav-link.NavFont(href="#") เกี่ยวกับเรา
+      li.nav-item
+        a.nav-link.NavFont(href="#") คำถามที่พบบ่อย
+      li.nav-item
+        a.nav-link.NavFont(href="#") ข้อกำหนดและเงื่อนไข
+      li.nav-item.dropdown
+        a.nav-link.dropdown-toggle.NavFont#navbarDropdown(href="#", role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") จัดการโครงการ
+        .dropdown-menu(aria-labelledby="navbarDropdown")
+          a.dropdown-item.NavFont(href="/createpj") สร้างโครงการ
+          a.dropdown-item.NavFont(href="#") โปรโมทโครงการ
+      li.nav-item
+        a.nav-link.NavFont(href="#") ถอนเงิน
+      li.nav-item
+        span.align-middle
+          i.fa.fa-search.fa-lg
+      li.nav-item
+        form.form-line.SearchBox
+          input.form-control.mr-sm-2.NavFont(type="search", placeholder="Search...", aria-label="Search")
+      li.nav-item
+        a.nav-link(href="#")
+          span.align-middle
+            i.fa.fa-bell.fa-lg
+      li.nav-item
+        a.nav-link(href="#")
+          span.align-middle
+            i.fa.fa-user-circle.fa-lg
+      li.nav-item
+        a.nav-link.LoginButton(href="#") Login
+.container
+  br
+  br
+  .row.justify-content-center
+    .col-7
+      h1 โครงการระดมทุนซื้อเครื่องมือการแพทย์เพื่อบริจาคให้โรงพยาบาล A
+.container
+  br
+  br
+  .row.justify-content-center
+    .col-auto
+      h5
+        a.Menu.CurrentMenu(href="/pjdescription") รายละเอียดโครงการ
+    .col-auto
+      h5.Menu.MenuGrid |
+    .col-auto
+      h5
+        a.Menu.Bordered(href="/progress") ความคืบหน้าโครงการ
+    .col-auto
+      h5.Menu.MenuGrid |
+    .col-auto
+      h5
+        a.Menu.Bordered(href="/donatest") สถานะการบริจาค
+    .col-auto
+      h5.Menu.MenuGrid |
+    .col-auto
+      h5
+        a.Menu.Bordered(href="/giftlist") ของขวัญ
+    .col-auto
+      h5.Menu.MenuGrid |
+    .col-auto
+      h5
+        a.Menu(href="/editpj") แก้ไขโครงการ
+.container
+  br
+  .row
+    .col-sm
+      #carouselExampleControls.carousel.slide(data-ride="carousel")
+        .carousel-inner
+          .carousel-item.active
+            img.d-block.w-100(src="surgeons-interacting-with-each-other-operation-room.jpg", alt="Doctor")
+            .carousel-caption.d-none.d-md-block
+              h5.ImageCaption ห้องผ่าตัดโรงพยาบาล A
+          .carousel-item
+            img.d-block.w-100(src="Cat2.jpg", alt="Cat2")
+            .carousel-caption.d-none.d-md-block
+              h5.ImageCaption Cat2
+        a.carousel-control-prev(href="#carouselExampleControls", role="button", data-slide="prev")
+          span.carousel-control-prev-icon(aria-hidden="true")
+          span.sr-only Previous
+        a.carousel-control-next(href="#carouselExampleControls", role="button", data-slide="next")
+          span.carousel-control-next-icon(aria-hidden="true")
+          span.sr-only Next
+    .col-sm
+      h5.Status กำลังระดมทุน
+      br
+      h5 โดย The Cat
+      br
+      p.Description Woman Yelling at a Cat refers to a meme format featuring a screen cap of The Real Housewives of Beverly Hills cast members Taylor Armstrong and Kyle Richards followed by a picture of a confused-looking cat sitting behind a dinner plate. The format gained significant popularity across the web in mid-June 2019 and the cat was later identified as Smudge the Cat.
+      br
+      .container
+        .row
+          .col-7
+            h6.CurrentFund 8,000 บาท
+          .col-3
+            h6.TargetFund 10,000 บาท
+          .col-2
+            img.goalPic(src="goal.png")
+      .progress
+        .progress-bar.bg-success(role="progressbar", style="width: 75%", aria-valuenow="75", aria-valuemin="0", aria-valuemax="100")
+      .row
+        .col-sm-8
+        .col-sm-4
+          br
+          h6 เหลือเวลา 42 วัน
+      br
+      .row
+        .col-sm-2
+          a.nav-link(href="#")
+            i.fa.fa-facebook-square.fa-3x
+        .col-sm-2
+          a.nav-link(href="#")
+            i.fa.fa-twitter-square.fa-3x
+        .col-sm-2
+          a.nav-link(href="#")
+            i.fa.fa-instagram.fa-3x
+        .col-sm-3
+        .col-sm-3
+          button.btn.btn-danger.btn-lg.DonateButton(type="button")
+            h6 บริจาค
+.container
+  br
+  br
+  .row.justify-content-center
+    .col-7
+      h4.Gift ของที่ระลึกที่จะได้รับเมื่อบริจาคขั้นต่ำตามที่ชี้แจงในลำดับต่อไป
+.container
+  br
+  .row.justify-content-center
+    .col
+    .col-auto
+      i.fa.fa-gift.fa-4x
+      h6.Gift พวงกุญแจ
+      p.Gift 50 บาท
+    .col
+    .col-auto
+      i.fa.fa-gift.fa-4x
+      h6.Gift กระเป๋าผ้า
+      p.Gift 100 บาท
+    .col
+    .col-auto
+      i.fa.fa-gift.fa-4x
+      h6.Gift เสื้อยืด
+      p.Gift 200 บาท
+    .col
+.container
+  br
+  .row.justify-content-center
+    .col-9
+      p.Content Let us pray to the Lord of mercy, Who loves us tremendously, Who graciously protects us, Dear God, please grant us fortitude and strength, So that we can study well all day long. Please help us to progress creatively, To be good from day to day, To be honest, and morally conscious Please bless our nation, / and His Majesty our King, Bless our fellow countrymen, So they may love one another, And live happily in peace and harmony, Amen. Let us pray to the Lord our God, Who is full of love and mercy, Who protects us from all evils. A day has passed / and we have gained much knowledge. We thank you Lord for Your mercy. Please bless and protect our nation, His Majesty our King, Our parents and teachers. Please forgive us our trespasses, And lead us away from temptation and deliver us from danger, Amen.
+br
+footer.bg-light
+  .container
+    .row
+      .col-sm
+        h4 Footer
+        br
+        h6 test footer
+      .col-sm
+        h4 Test
+        br
+        h6 test footer
+      .col-sm
+        h4 Test
+        br
+        h6 test footer
+  .text-center.p-3(style='background-color: rgba(0, 0, 0, 0.2)')
+    | &copy; 2021 Copyright:
+    a.text-dark(href='https://Sharitys.com/') Sharitys.com
+script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')

@@ -1,7 +1,278 @@
+/* Initialize font */
+
+@font-face {
+  font-family: "Kanit Thin";
+  src: url("Kanit/Kanit-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Kanit Extra Light";
+  src: url("Kanit/Kanit-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Kanit Light";
+  src: url("Kanit/Kanit-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Kanit Regular";
+  src: url("Kanit/Kanit-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Kanit Medium";
+  src: url("Kanit/Kanit-Medium.ttf") format("truetype");
+}
+
+/* Everyting */
+
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-  }
+  font-family: "Kanit Regular";
+}
+
+/* Navbar */
+
+.Sharitys {
+  font-family: "Kanit Thin";
+  font-size: 300% !important;
+}
+
+.NavFont {
+  font-family: "Kanit Light";
+  font-size: 110% !important;
+}
+
+.NavFont:hover {
+  color: #FF8C42 !important;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.LoginButon {
+  font-size: 110% !important;
+}
+
+.LoginButon:hover {
+  color: black !important;
+}
+
+.navbarSecond {
+  background: linear-gradient(90deg, #ffffff 75%, #FF8C42 75%);
+}
+
+/* Page name */
+
+h1 {
+  text-align: center;
+}
+
+/* Create project: Agreement */
+
+.CreateProjectColor {
+  background-color: #4E598C;
+}
+
+.CreateProjectFontColor {
+  color: white;
+}
+
+.CreateProjectFont {
+  font-family: 'Kanit Extra Light';
+  text-align: justify;
+}
+
+.CheckBox {
+  height: 17px;
+  width: 17px;
+}
+
+.CreateProjectQuestion {
+  font-family: 'Kanit Extra Light';
+}
+
+.CreateProjectQuestionGift {
+  font-family: 'Kanit Light';
+}
+
+/* All Project: View */
+
+.AllProjectBox {
+  border: 1px solid gray;
+  border-radius: 25px;
+}
+
+.ProjectName {
+  color: black !important;
+  font-family: 'Kanit Medium';
+  text-align: center;
+}
+
+.ProjectStatus {
+  font-family: 'Kanit Light';
+  color: #73B320;
+}
+
+.ProjectRange {
+  font-family: 'Kanit Light';
+  color: #FF8C42;
+}
+
+.ProjectDescription {
+  font-family: 'Kanit Light';
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+/* Menu */
+
+.Menu {
+  font-family: "Kanit Extra Light";
+  text-decoration: underline;
+  color: black;
+}
+
+.CurrentMenu {
+  color: #FF8C42;
+}
+
+.MenuGrid {
+  text-decoration: none;
+}
+
+.ShareIconColor {
+  color:  #FF8C42 !important;
+}
+
+/* Project Description: Image and Status */
+
+.ImageCaption {
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+.Status {
+  color: #73B320;
+}
+
+.Description {
+  font-family: 'Kanit Extra Light';
+  text-align: justify;
+}
+
+.CurrentFund {
+  color: #73B320;
+}
+
+.TargetFund {
+  color: #FF8C42;
+}
+
+.goalPic {
+  width: 70%;
+}
+
+.fa {
+  color: black;
+}
+
+.DonateButton {
+  background-color: #FF8C42 !important;
+  border-radius: 2px !important;
+}
+
+/* Project Description: Gift */
+
+.Gift {
+  text-align: center;
+}
+
+/* Project Description: Content */
+
+.Content {
+  font-family: "Kanit light";
+  text-align: justify;
+}
+
+/* Progress Update: Input box */
+
+.Box {
+  border: 1px solid black;
+}
+
+.Question {
+  font-family: 'Kanit Extra Light';
+}
+
+.Upload {
+  width: 10%;
+}
+
+.UpdateProgressButton {
+  background-color: #FF8C42 !important;
+  border-radius: 15px !important;
+}
+
+/* Progress Update: Update blog */
+
+.ProgressColor {
+  background-color: #4E598C;
+}
+
+.ProgressFontColor {
+  color: white;
+}
+
+.ProgressFont {
+  font-family: 'Kanit Extra Light';
+  text-align: justify;
+}
+
+.IconColor {
+  color: white;
+}
+
+/* Donate Status: Update */
+
+.UpdateColor {
+  background-color: #4E598C;
+}
+
+.UpdateFontColor {
+  color: white;
+}
+
+.UpdateFont {
+  font-family: 'Kanit Extra Light';
+  text-align: justify;
+}
+
+.UpdateIconColor {
+  color: white;
+}
+
+/* Gift List: Excel Font */
+
+.ExcelDownloadColor {
+  color: #1d6f42;
+}
+
+/* Edit Project */
+
+.EditQuestion {
+  font-family: 'Kanit Extra Light';
+}
+
+.EditQuestionGift {
+  font-family: 'Kanit Light';
+}
+
+.EditProjectButton {
+  background-color: #FF8C42 !important;
+  border-radius: 15px !important;
+}

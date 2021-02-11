@@ -87,7 +87,9 @@ app.get('/editpj', (req,res) => {
 }) 
 
 //TODO: Delete pj .pug and script(src="deletepj.js", async) in pug
-
+app.get('/deletepj', (req,res) => {
+    res.render('Delete_Project')
+}) 
 //////////////////////////////////////////////////////////////////
 
 app.listen(5000, function () {

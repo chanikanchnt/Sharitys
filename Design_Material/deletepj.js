@@ -10,20 +10,17 @@ function ready() {
     for (var i = 0; i < DeleteProjectButton.length; i++) {
         var button = DeleteProjectButton[i]
         button.addEventListener('click', DeleteProject)
-    }
-
+    }    
 }
 
 function DeleteProject() {
     var projectToDelete = document.getElementById("SelectProjectToDelete").value;
     console.log(projectToDelete)
-
 }
 
-//For Project Management -- JN
 
-const express = require('express')
-var router = express.Router()
+const express =require('express')  //Node.js: Uncaught ReferenceError: require is not defined
+const router = express.Router()
 
 router.use(function timeLog(req, res, next) {
     console.log('Page Delete Project Is Showing..')
@@ -38,6 +35,13 @@ var dbConfig = {
 }
 
 var sql = require("mssql");
+sql.connect(dbConfig,function(err){
+    if (err) console.log(err);
+})
+
+//let sqlRequest = new sql.Request();
+//let sqlQuery = 'SELECT* FROM SHORTTEST WHERE num ='+projectToDelete;
+//sqlRequest.query(sqlQuery)
 
 // TODO: **When admin click the delete button** --> Redirect to localhost:5000/deletepj/x url
 // res.redirect('localhost:5000/deletepj/x');

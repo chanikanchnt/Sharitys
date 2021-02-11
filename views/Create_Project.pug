@@ -124,7 +124,7 @@ style.
               background-color: #4CAF50;
           }
   
-form#createpjdetail(action="/action_page.php", method="POST")
+form#createpjdetail
   br
   br
   h1 สร้างโครงการ
@@ -172,7 +172,7 @@ form#createpjdetail(action="/action_page.php", method="POST")
       .col-2
         h5.CreateProjectQuestion ชื่อโครงการ
       .col-8
-        input.form-control(placeholder="ชื่อโครงการ...", oninput="this.className = \'\'", name="pjname", type="text")
+        input.form-control#ProjectTitle(placeholder="ชื่อโครงการ...", oninput="this.className = \'\'", name="pjname", type="text")
       .col-1
     br
     .row
@@ -180,9 +180,9 @@ form#createpjdetail(action="/action_page.php", method="POST")
       .col-2
         h5.CreateProjectQuestion คำบรรยายรายละเอียด
       .col-8
-        input.form-control(placeholder="จุดประสงค์...", oninput="this.className = \'\'", name="pjobj", type="text")
-        input.form-control(placeholder="แผนโครงการ...", oninput="this.className = \'\'", name="pjplan", type="text")
-        input.form-control(placeholder="ประโยชน์ที่จะได้รับ...", oninput="this.className = \'\'", name="pjbenefit", type="text")
+        input.form-control#ProjectPurpose(placeholder="จุดประสงค์...", oninput="this.className = \'\'", name="pjobj", type="text")
+        input.form-control#ProjectPlan(placeholder="แผนโครงการ...", oninput="this.className = \'\'", name="pjplan", type="text")
+        input.form-control#ProjectBenefits(placeholder="ประโยชน์ที่จะได้รับ...", oninput="this.className = \'\'", name="pjbenefit", type="text")
       .col-1
     br
     .row
@@ -204,7 +204,7 @@ form#createpjdetail(action="/action_page.php", method="POST")
         h5.CreateProjectQuestion เลขที่บัญชี
       .col-8
         form.form-line
-          input.form-control(placeholder="เลขที่บัญชี...", oninput="this.className = \'\'", name="pjbankno", type="text")
+          input.form-control#BankNumber(placeholder="เลขที่บัญชี...", oninput="this.className = \'\'", name="pjbankno", type="text")
       .col-1
     br
     .row
@@ -223,7 +223,7 @@ form#createpjdetail(action="/action_page.php", method="POST")
         h5.CreateProjectQuestion Facebook ของโครงการ
       .col-8
         form.form-line
-          input.form-control(placeholder="ชื่อเพจ Facebook...", oninput="this.className = \'\'", name="pjfb", type="text")
+          input.form-control#Facebook(placeholder="ชื่อเพจ Facebook...", oninput="this.className = \'\'", name="pjfb", type="text")
       .col-1
     br
     //  Haven't Set it as Not required 
@@ -233,7 +233,7 @@ form#createpjdetail(action="/action_page.php", method="POST")
         h5.CreateProjectQuestion Twitter ของโครงการ
       .col-8
         form.form-line
-          input.form-control(placeholder="ชื่อบัญชี Twitter...", oninput="this.className = \'\'", name="pjtwt", type="text")
+          input.form-control#Twitter(placeholder="ชื่อบัญชี Twitter...", oninput="this.className = \'\'", name="pjtwt", type="text")
       .col-1
     br
     //  Haven't Set it as Not required 
@@ -243,7 +243,7 @@ form#createpjdetail(action="/action_page.php", method="POST")
         h5.CreateProjectQuestion Instagram ของโครงการ
       .col-8
         form.form-line
-          input.form-control(placeholder="ชื่อบัญชี Instagram...", oninput="this.className = \'\'", name="pjig", type="text")
+          input.form-control#Instagram(placeholder="ชื่อบัญชี Instagram...", oninput="this.className = \'\'", name="pjig", type="text")
       .col-1
     //  Haven't Set it as Not required 
     //  Haven't add 'add more' function 
@@ -311,14 +311,14 @@ form#createpjdetail(action="/action_page.php", method="POST")
     .col-2
       h5.CreateProjectQuestion นามเจ้าของโครงการ
     .col-8
-      input.form-control(placeholder="ชื่อ...", oninput="this.className = \'\'", name="pjownername", type="text")
+      input.form-control#OwnerName(placeholder="ชื่อ...", oninput="this.className = \'\'", name="pjownername", type="text")
     .col-1
   .row
     .col-1
     .col-2
       h5.CreateProjectQuestion อีเมลที่ใช้แสดงบนหน้าโครงการ
     .col-8
-      input.form-control(placeholder="อีเมลติดต่อเกี่ยวกับโครงการ...", oninput="this.className = \'\'", name="pjowneremail", type="text")
+      input.form-control#OwnerEmail(placeholder="อีเมลติดต่อเกี่ยวกับโครงการ...", oninput="this.className = \'\'", name="pjowneremail", type="text")
     .col-1
 // Step 4 Fd Account Detail
 .tab.container
@@ -334,7 +334,7 @@ form#createpjdetail(action="/action_page.php", method="POST")
     .col-2
       h5.CreateProjectQuestion ชื่อ
     .col-8
-      input.form-control(placeholder="ชื่อ...", oninput="this.className = \'\'", name="fdfname", type="text")
+      input.form-control#AccountName(placeholder="ชื่อ...", oninput="this.className = \'\'", name="fdfname", type="text")
     .col-1
   br
   .row
@@ -342,7 +342,7 @@ form#createpjdetail(action="/action_page.php", method="POST")
     .col-2
       h5.CreateProjectQuestion นามสกุล
     .col-8
-      input.form-control(placeholder="นามสกุล...", oninput="this.className = \'\'", name="fdlname", type="text")
+      input.form-control#AccountLastname(placeholder="นามสกุล...", oninput="this.className = \'\'", name="fdlname", type="text")
     .col-1
   br
   .row
@@ -350,7 +350,7 @@ form#createpjdetail(action="/action_page.php", method="POST")
     .col-2
       h5.CreateProjectQuestion เบอร์โทรศัพท์
     .col-8
-      input.form-control(placeholder="เบอร์โทรศัพท์...", oninput="this.className = \'\'", name="fdphoneno", type="text")
+      input.form-control#AccountPhoneNumber(placeholder="เบอร์โทรศัพท์...", oninput="this.className = \'\'", name="fdphoneno", type="text")
     .col-1
   br
   .row
@@ -358,7 +358,7 @@ form#createpjdetail(action="/action_page.php", method="POST")
     .col-2
       h5.CreateProjectQuestion อีเมล
     .col-8
-      input.form-control(placeholder="อีเมลของบัญชี Sharitys...", oninput="this.className = \'\'", name="fdemail", type="text")
+      input.form-control#AccountEmail(placeholder="อีเมลของบัญชี Sharitys...", oninput="this.className = \'\'", name="fdemail", type="text")
     .col-1
   br
   .row
@@ -367,14 +367,14 @@ form#createpjdetail(action="/action_page.php", method="POST")
       h5.CreateProjectQuestion ที่อยู่
     .col-8
       form.form-line
-        textarea.form-control(placeholder="ที่อยู่", name="fdaddress", type="text", rows="3")
+        textarea.form-control#AccountAddress(placeholder="ที่อยู่", name="fdaddress", type="text", rows="3")
     .col-1
 div(style="overflow:auto;")
   div(style="float:right;")
     // button type="submit" id="agreeBtn" name="agree_confirm" value="submit" onclick="if(!this.form.agree.checked){alert('You must agree to the terms first.');return false}">Agree</button
     button#prevBtn(type="button", onclick="nextPrev(-1)") ย้อนกลับ
     button#nextBtn(type="button", onclick="nextPrev(1)") ต่อไป
-    button#agreeBtn(type="button", onclick="nextPrev(2)") ยืนยัน
+    button#agreeBtn.CreateProjectButton(type="button", onclick="nextPrev(2)") ยืนยัน
 //  Circles which indicates the steps of the form: 
 div(style="text-align:center;margin-top:40px;")
   span.step

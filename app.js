@@ -38,18 +38,6 @@ app.get('/signout', (req,res) => {
 
 app.use(express.static('Design_Material'));
 
-app.get('/viewallpj', (req,res) => {
-    res.render('All_Project')
-}) 
-
-app.get('/createpj', (req,res) => {
-    res.render('Create_Project')
-}) 
-
-app.get('/editpj', (req,res) => {
-    res.render('Edit_Project')
-}) 
-
 app.get('/donatest', (req,res) => {
     res.render('Donate_Status')
 }) 
@@ -66,8 +54,37 @@ app.get('/pjdescription', (req,res) => {
     res.render('Project_Description')
 }) 
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port : ${PORT}`)
+/////////////////////////////////////////////////////////////////  
+//var http = require('http');
+//http.createServer(onRequest_b).listen(5000);
+//function onRequest_b (req, res) {
+  //  res.write('Response from 9012\n');
+    //res.end();
+ // }
+
+var sqlport = process.env.PORT || 5000;
+
+app.get('/viewallpj', function (req,res){
+    res.render('All_Project')
+}) 
+
+app.get('/createpj', (req,res) => {
+    res.render('Create_Project')
+}) 
+
+app.get('/editpj', (req,res) => {
+    res.render('Edit_Project')
+}) 
+
+//////////////////////////////////////////////////////////////////
+
+app.listen(sqlport, function () {
+    console.log('Example app listening on port ' + sqlport + '!');
+  });
+   
+
+app.listen(3000, () => {
+    console.log(`Server is running on port : 3000`)
 })
 
 module.exports = app

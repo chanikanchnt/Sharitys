@@ -8,7 +8,7 @@ meta(name="viewport", content="width=device-width,initial-scale=1")
 title All Project
 link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm", crossorigin="anonymous")
 link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
-script(src="viewpj.js", async)
+script(src="deletepj.js", async)
 nav.navbar.navbar-expand-lg.navbarSecond.navbar-light.py-lg-3
   a.navbar-brand.Sharitys(href="#") Sharitys
   button.navbar-toggler(data-toggle="collapse", data-target="#userNavBar")
@@ -74,22 +74,31 @@ nav.navbar.navbar-expand-lg.navbarSecond.navbar-light.py-lg-3
 .container
   .row.justify-content-center
     .col-0
-    form
-      input#male(type="radio", name="gender", value="male") 
-      label(for="male") โครงการระดมทุนซื้อเครื่องมือการแพทย์เพื่อบริจาคให้โรงพยาบาล A
-      br
-      br
-      input#female(type="radio", name="gender", value="female")
-      label(for="female") โครงการรวมเงินเพื่อซื้ออาหารให้คนไร้บ้าน
-      br
-      br
-      input#other(type="radio", name="gender", value="other")
-      label(for="other") โครงการระดมทุนจ่ายค่ารักษาพยาบาลแมวจรจัด
-      br
-      br
-      .row.justify-content-center
-        .col-0
-          input(type="submit", value="ยืนยัน")
+    //- form#SelectProjectToDelete
+    //-   input#male(type="radio", name="gender", value="male") 
+    //-   label(for="male") โครงการระดมทุนซื้อเครื่องมือการแพทย์เพื่อบริจาคให้โรงพยาบาล A
+    //-   br
+    //-   br
+    //-   input#female(type="radio", name="gender", value="female")
+    //-   label(for="female") โครงการรวมเงินเพื่อซื้ออาหารให้คนไร้บ้าน
+    //-   br
+    //-   br
+    //-   input#other(type="radio", name="gender", value="other")
+    //-   label(for="other") โครงการระดมทุนจ่ายค่ารักษาพยาบาลแมวจรจัด
+    //-   br
+    //-   br
+    //-   .row.justify-content-center
+    //-     .col-0
+    //-       input.DeleteProjectButton(type="submit", value="ยืนยัน")
+    select#SelectProjectToDelete(oninput="this.className = \'\'", name="pjbanktype")
+      option โครงการระดมทุนซื้อเครื่องมือการแพทย์เพื่อบริจาคให้โรงพยาบาล A
+      option โครงการรวมเงินเพื่อซื้ออาหารให้คนไร้บ้าน
+      option โครงการระดมทุนจ่ายค่ารักษาพยาบาลแมวจรจัด
+    br
+    br
+    .row.justify-content-center
+      .col-0
+        input.DeleteProjectButton(type="submit", value="ยืนยัน")
 
 footer.bg-light
   .container

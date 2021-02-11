@@ -69,6 +69,13 @@ h1 {
   text-align: center;
 }
 
+/* Signin */
+
+.SignInBox {
+  border: 1px solid gray;
+  border-radius: 25px;
+}
+
 /* Create project: Agreement */
 
 .CreateProjectColor {

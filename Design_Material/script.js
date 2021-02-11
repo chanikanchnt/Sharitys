@@ -5,7 +5,6 @@ if (document.readyState == 'loading') {
 }
 
 function ready() {
-
     var updateProgressButton = document.getElementsByClassName('UpdateProgressButton')
     for (var i = 0; i < updateProgressButton.length; i++) {
         var button = updateProgressButton[i]

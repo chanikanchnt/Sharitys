@@ -62,15 +62,34 @@ nav.navbar.navbar-expand-lg.navbarSecond.navbar-light.py-lg-3
     .col-7
       h1 ยุติโครงการ
 
+<!--Select projects (drop down list)-->
 .container
   br
   br
   .row.justify-content-center
     .col-0
-    button.btn.btn-danger.btn-lg.DeleteProjectButton(type="button")
-      h6 ยืนยัน
+        h2 เลือกโครงการ
+        br
 
-
+.container
+  .row.justify-content-center
+    .col-0
+    form
+      input#male(type="radio", name="gender", value="male") 
+      label(for="male") โครงการระดมทุนซื้อเครื่องมือการแพทย์เพื่อบริจาคให้โรงพยาบาล A
+      br
+      br
+      input#female(type="radio", name="gender", value="female")
+      label(for="female") โครงการรวมเงินเพื่อซื้ออาหารให้คนไร้บ้าน
+      br
+      br
+      input#other(type="radio", name="gender", value="other")
+      label(for="other") โครงการระดมทุนจ่ายค่ารักษาพยาบาลแมวจรจัด
+      br
+      br
+      .row.justify-content-center
+        .col-0
+          input(type="submit", value="ยืนยัน")
 
 footer.bg-light
   .container

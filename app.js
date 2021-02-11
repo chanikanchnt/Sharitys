@@ -1,20 +1,32 @@
 const express = require("express"); 
-const PORT = process.env.PORT || 3000
 const admin = require("firebase-admin"); 
 const cookieParser = require("cookie-parser"); 
-  
+var sql = require("mssql");
 const app = express(); 
 app.use(cookieParser()); 
 
 app.set('views', __dirname + '/views')
 app.set('view engine', 'pug')
 
-var serviceAccount = require("./firebaseAdminSDK/sharitys-d1b14-firebase-adminsdk-2mtlq-666e11d65a.json");
+//db
+dbConfig = {
+    user: 'sa',
+    password: '020Jenny!',
+    server: 'localhost',
+    database: 'projectdbtest' //Change to be projectdbtest for testing // sharitysdb
+};
 
+//login
+var serviceAccount = require("./firebaseAdminSDK/sharitys-d1b14-firebase-adminsdk-2mtlq-666e11d65a.json");
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://sharitys-d1b14-default-rtdb.firebaseio.com"
 });
+
+// check connection
+app.get('/check', function (req, res) {
+    res.send('GET request to the homepage')
+})
 
 app.get('/', (req,res) => {
     res.render('index')
@@ -62,9 +74,7 @@ app.get('/pjdescription', (req,res) => {
     //res.end();
  // }
 
-var sqlport = process.env.PORT || 5000;
-
-app.get('/viewallpj', function (req,res){
+app.get('/viewallpj', (req,res)=>{
     res.render('All_Project')
 }) 
 
@@ -76,10 +86,12 @@ app.get('/editpj', (req,res) => {
     res.render('Edit_Project')
 }) 
 
+//TODO: Delete pj .pug and script(src="deletepj.js", async) in pug
+
 //////////////////////////////////////////////////////////////////
 
-app.listen(sqlport, function () {
-    console.log('Example app listening on port ' + sqlport + '!');
+app.listen(5000, function () {
+    console.log('Server is running on port : 5000');
   });
    
 

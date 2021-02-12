@@ -43,7 +43,8 @@ html
                 },
                 // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
                 //- signInFlow: 'popup',
-                signInSuccessUrl: '/signinsuccess',
+                signInSuccessUrl: '/viewallpj',
+                signInFlow: 'popup',
                 signInOptions: [ 
                     // Google sign in option 
                     firebase.auth.GoogleAuthProvider.PROVIDER_ID, 
@@ -110,14 +111,18 @@ nav.navbar.navbar-expand-lg.navbarSecond.navbar-light.py-lg-3
           span.align-middle
             i.fa.fa-user-circle.fa-lg
       li.nav-item
-        a.nav-link.LoginButton(href="#") Login
+        a.nav-link.LoginButton(href="/signin") Login
 
 .container
   br
   br
   br
   .row.justify-content-center
-    .col-5.SignInBox
+    .col-7
+      h1 Sign In
+      br
+  .row.justify-content-center
+    .col-4.SignInBox
         //- h1(align='center') Sharitys sign in page
         div(id='firebaseui-auth-container')
         //- div(id='loader') loading...

@@ -39,6 +39,8 @@ html
                 // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
                 //- signInFlow: 'popup',
                 signInSuccessUrl: '/signinsuccess',
+                // Opens IDP Providers sign-in flow in a popup.
+                signInFlow: 'popup',
                 signInOptions: [ 
                     // Google sign in option 
                     firebase.auth.GoogleAuthProvider.PROVIDER_ID, 

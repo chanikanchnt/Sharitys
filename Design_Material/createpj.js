@@ -28,7 +28,7 @@ function CreateProject() {
     
     var pjownertype = document.getElementById("pjownertype").value;
     var ownerName = document.getElementById("OwnerName").value;
-    var OwnerEmail = document.getElementById("OwnerName").value;
+    var ownerEmail = document.getElementById("OwnerName").value;
 
     var accountName = document.getElementById("AccountName").value;
     var accountLastname = document.getElementById("AccountLastname").value;
@@ -36,11 +36,26 @@ function CreateProject() {
     var accountEmail = document.getElementById("AccountEmail").value;
     var accountAddress = document.getElementById("AccountAddress").value;
 
-    console.log(accountName)
-    console.log(accountLastname)
-    console.log(accountPhoneNumber)
-    console.log(accountEmail)
-    console.log(accountAddress)
+    var link = title + "-" 
+            + purpose + "-" 
+            + plan + "-" 
+            + benefits + "-" 
+            + banktype + "-" 
+            + banknumber + "-" 
+            + endDate + "-" 
+            + facebook + "-" 
+            + twitter + "-" 
+            + ig + "-" 
+            + pjownertype + "-" 
+            + ownerName + "-" 
+            + ownerEmail + "-" 
+            + accountName + "-" 
+            + accountLastname + "-" 
+            + accountPhoneNumber + "-" 
+            + accountEmail + "-" 
+            + accountAddress ; 
+
+    
 }
 
 //For Project Management -- JN
@@ -93,5 +108,33 @@ router.get('/addnw/:num-:word', function (req, res) { //Success (Can add pj)
     })
 });
 
+router.get('/:title-:purpose-:plan-:benefits-:banktype-:banknumber-:endDate-:facebook-:twitter-:ig-:pjownertype-:ownerName-:ownerEmail-:accountName-:accountLastname-:accountPhoneNumber-:accountEmail-:accountAddress', function (req, res) { //Success (Can add pj)
 
+    sql.connect(dbConfig).then(() => {
+        return sql.query("INSERT INTO shorttest VALUES(" + req.params.title + ", " 
+                                                        + req.params.purpose + ", " 
+                                                        + req.params.plan + ", " 
+                                                        + req.params.benefits + ", " 
+                                                        + req.params.banktype + ", " 
+                                                        + req.params.banknumber + ", " 
+                                                        + req.params.endDate + ", " 
+                                                        + req.params.facebook + ", " 
+                                                        + req.params.twitter + ", " 
+                                                        + req.params.ig + ", " 
+                                                        + req.params.pjownertype + ", " 
+                                                        + req.params.ownerName + ", " 
+                                                        + req.params.ownerEmail + ", " 
+                                                        + req.params.accountName + ", " 
+                                                        + req.params.accountLastname + ", " 
+                                                        + req.params.accountPhoneNumber + ", " 
+                                                        + req.params.accountEmail + ", " 
+                                                        + req.params.accountAddress 
+                                                        + ");"
+        );
+    }).then(result => {
+        res.status(200).send("Data Added Successfully.");
+    }).catch(err => {
+        res.status(415).send("Something Went Wrong !!!");
+    })
+});
 module.exports = router

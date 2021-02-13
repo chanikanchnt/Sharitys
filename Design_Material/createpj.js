@@ -28,7 +28,7 @@ function CreateProject() {
     
     var pjownertype = document.getElementById("pjownertype").value;
     var ownerName = document.getElementById("OwnerName").value;
-    var ownerEmail = document.getElementById("OwnerName").value;
+    var ownerEmail = document.getElementById("OwnerEmail").value;
 
     var accountName = document.getElementById("AccountName").value;
     var accountLastname = document.getElementById("AccountLastname").value;
@@ -54,8 +54,6 @@ function CreateProject() {
             + accountPhoneNumber + "-" 
             + accountEmail + "-" 
             + accountAddress ; 
-
-    
 }
 
 //For Project Management -- JN

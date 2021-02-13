@@ -373,8 +373,8 @@ div(style="overflow:auto;")
   div(style="float:right;")
     // button type="submit" id="agreeBtn" name="agree_confirm" value="submit" onclick="if(!this.form.agree.checked){alert('You must agree to the terms first.');return false}">Agree</button
     button#prevBtn(type="button", onclick="nextPrev(-1)") ย้อนกลับ
-    button#nextBtn(type="button", onclick="nextPrev(1)") ต่อไป
-    button#agreeBtn.CreateProjectButton(type="button", onclick="nextPrev(2)") ยืนยัน
+    button#nextBtn.CreateProjectButton(type="button", onclick="nextPrev(1)") ต่อไป
+    button#agreeBtn(type="button", onclick="nextPrev(2)") ยืนยัน
 //  Circles which indicates the steps of the form: 
 div(style="text-align:center;margin-top:40px;")
   span.step

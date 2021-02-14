@@ -9,6 +9,7 @@ function ready() {
     var CreateProjectButton = document.getElementsByClassName('CreateProjectButton')
     for (var i = 0; i < CreateProjectButton.length; i++) {
         var button = CreateProjectButton[i]
+        console.log("Page ready")
         button.addEventListener('click', CreateProject)
     }
 
@@ -38,9 +39,12 @@ function CreateProject() {
 
     console.log(title);
 
+    //Still wrong string
     var link = title + "-" + purpose + "-" + plan + "-" + benefits + "-" + banktype + "-"+ banknumber + "-" + endDate + "-"+ facebook + "-"+ twitter + "-" + ig + "-" + pjownertype + "-" + ownerName + "-" + ownerEmail + "-" + accountName + "-" + accountLastname + "-" + accountPhoneNumber + "-" + accountEmail + "-" + accountAddress ; 
+    console.log(link);
 
-            console.log(link);
-
+    //TODO: Change Link
+    //TODO: Change location of this function to run after click submit (not click next)
+    location.replace("http://localhost:5000/createpj_db/addnw/11-'eleven'") //Redirect sucessfully 
 }
 

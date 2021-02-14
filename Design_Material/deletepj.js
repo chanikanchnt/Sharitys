@@ -16,5 +16,7 @@ function ready() {
 function DeleteProject() {
     var projectToDelete = document.getElementById("SelectProjectToDelete").value;
     console.log(projectToDelete)
-    
+
+    //TODO: Change Link
+    location.replace(" http://localhost:5000/createpj_db/addnw/11-'eleven'") //Redirect sucessfullt
 }

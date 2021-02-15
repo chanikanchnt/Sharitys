@@ -1,0 +1,9 @@
+Managing project: node serverjn.js
+
+***Delete pj***
+-For fd-
+http://localhost:5000/deletepjfd
+http://localhost:5000/deletepj_db/fdrequest/xx (xx=project id)
+-For admin-
+http://localhost:5000/deletepjad
+http://localhost:5000/deletepj_db/admincf/xx (xx=project id)

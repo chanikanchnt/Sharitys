@@ -53,7 +53,7 @@ app.get('/editpj', (req,res) => {
     res.render('Edit_Project')
 }) 
 
-app.get('/deletepj', (req,res) => {
+app.get('/deletepjad', (req,res) => {
     res.render('Delete_Project_Ad')
 }) 
 

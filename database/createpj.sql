@@ -53,6 +53,9 @@ create table project(
 
     recpId INT NOT NULL,
     fdid INT Foreign Key REFERENCES fundraiser(fdid) NOT NULL,
-    tyid INT Foreign Key REFERENCES projectType(tyid) NOT NULL
+    tyid INT Foreign Key REFERENCES projectType(tyid) NOT NULL,
+
+    pjStatus VARCHAR(50),
+    pjTerminateReason VARCHAR(1000)
  )
 go

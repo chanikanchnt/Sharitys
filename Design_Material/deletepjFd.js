@@ -15,12 +15,14 @@ function ready() {
 
 function DeleteProject() {
     var stringProjectToDelete = document.getElementById("SelectProjectToDelete");
-    //var idProjectToDelete = stringProjectToDelete.options[stringProjectToDelete.selectedIndex].id;
+    //Demo var idProjectToDelete = 25;
+    var idProjectToDelete = stringProjectToDelete.options[stringProjectToDelete.selectedIndex].id;
+    var reqreason = document.getElementById("reason").value;
+
     console.log(stringProjectToDelete.value)
     console.log(idProjectToDelete)
+    console.log(reqreason)
 
-    //Demo
-    var idProjectToDelete = 25;
     var link = "http://localhost:5000/deletepj_db/fdrequest/" + idProjectToDelete; 
     location.replace(link)
 }

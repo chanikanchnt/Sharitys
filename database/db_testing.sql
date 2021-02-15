@@ -20,4 +20,7 @@ go
 ALTER TABLE shorttest
 ADD pjstatus varchar(30);
 
+ALTER TABLE shorttest
+ADD pjTerminateReason VARCHAR(1000);
+
 select * from shorttest

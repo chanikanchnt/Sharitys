@@ -73,13 +73,18 @@ nav.navbar.navbar-expand-lg.navbarSecond.navbar-light.py-lg-3
         br
 
 .container
-  .row.justify-content-center
-    .col-0
-    select#SelectProjectToDelete(oninput="this.className = \'\'", name="pjbanktype")
-      option#100 โครงการระดมทุนซื้อเครื่องมือการแพทย์เพื่อบริจาคให้โรงพยาบาล A
-      option#200 โครงการรวมเงินเพื่อซื้ออาหารให้คนไร้บ้าน
-      option#300 โครงการระดมทุนจ่ายค่ารักษาพยาบาลแมวจรจัด
+  form#deletepjdetail
+    .row.justify-content-center
+      .col-0
+      select#SelectProjectToDelete(oninput="this.className = \'\'", name="pjbanktype")
+        option#100 โครงการระดมทุนซื้อเครื่องมือการแพทย์เพื่อบริจาคให้โรงพยาบาล A
+        option#200 โครงการรวมเงินเพื่อซื้ออาหารให้คนไร้บ้าน
+        option#300 โครงการระดมทุนจ่ายค่ารักษาพยาบาลแมวจรจัด
+      br
     br
+    .row.justify-content-center
+      .col-0
+        textarea.form-control#reason(placeholder="เหตุผลประกอบ...", name="deletepjreason", type="text",rows="5", cols="47")
     br
     .row.justify-content-center
       .col-1

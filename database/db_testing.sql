@@ -17,4 +17,7 @@ insert into shorttest values(0,'zero'),
 (10,'ten')
 go
 
+ALTER TABLE shorttest
+ADD pjstatus varchar(30);
+
 select * from shorttest

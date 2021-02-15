@@ -19,7 +19,9 @@ function DeleteProject() {
     console.log(stringProjectToDelete.value)
     console.log(idProjectToDelete)
 
-    var idProjectToDelete;
-    var link = "http://localhost:5000/deletepj_db/" + idProjectToDelete;
+    //Demo
+    //var idProjectToDelete = 25;
+
+    var link = "http://localhost:5000/deletepj_db/admincf/" + idProjectToDelete; 
     location.replace(link)
 }

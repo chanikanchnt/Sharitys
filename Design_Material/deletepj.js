@@ -14,13 +14,12 @@ function ready() {
 }
 
 function DeleteProject() {
-    var projectToDelete = document.getElementById("SelectProjectToDelete").value;
-    console.log(projectToDelete)
+    var stringProjectToDelete = document.getElementById("SelectProjectToDelete");
+    var idProjectToDelete = stringProjectToDelete.options[stringProjectToDelete.selectedIndex].id;
+    console.log(stringProjectToDelete.value)
+    console.log(idProjectToDelete)
 
-    var projectToDelete_id = 35; //Demo
-
-    var link = "http://localhost:5000/deletepj_db/" + projectToDelete_id;
-    //TODO: Change Link
-    //location.replace("http://localhost:5000/createpj_db/addnw/11-'eleven'") //Redirect sucessfully
+    var idProjectToDelete;
+    var link = "http://localhost:5000/deletepj_db/" + idProjectToDelete;
     location.replace(link)
 }

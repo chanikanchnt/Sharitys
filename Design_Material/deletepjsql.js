@@ -18,7 +18,7 @@ sql.connect(dbConfig,function(err){
     if (err) console.log(err);
 })
 
-router.get('/fdrequest/:num', function (req, res) { //Success (Can really delete)
+router.get('/fdrequest/:num', function (req, res) { 
     sql.connect(dbConfig).then(() => {
         //return sql.query("DELETE FROM shorttest WHERE num = " + req.params.num);
         return sql.query("UPDATE shorttest SET pjstatus = 'pending for termination' WHERE num = " + req.params.num);
@@ -29,7 +29,7 @@ router.get('/fdrequest/:num', function (req, res) { //Success (Can really delete
     })
 });
 
-router.get('/admincf/:num', function (req, res) { //Success (Can really delete)
+router.get('/admincf/:num', function (req, res) { 
     sql.connect(dbConfig).then(() => {
         //return sql.query("DELETE FROM shorttest WHERE num = " + req.params.num);
         return sql.query("UPDATE shorttest SET pjstatus = 'terminated' WHERE num = " + req.params.num);

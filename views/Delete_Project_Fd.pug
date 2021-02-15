@@ -1,0 +1,108 @@
+html
+    head
+        style
+             include style.css
+
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+title All Project
+link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm", crossorigin="anonymous")
+link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+script(src="deletepjFd.js", async)
+script(src="deletepjsql.js", async)
+nav.navbar.navbar-expand-lg.navbarSecond.navbar-light.py-lg-3
+  a.navbar-brand.Sharitys(href="#") Sharitys
+  button.navbar-toggler(data-toggle="collapse", data-target="#userNavBar")
+    span.navbar-toggler-icon
+  .collapse.navbar-collapse#userNavBar
+    ul.navbar-nav.nav-fill.w-100
+      li.nav-item
+        a.nav-link.NavFont(href="#") หน้าแรก
+      li.nav-item.dropdown
+        a.nav-link.dropdown-toggle.NavFont#navbarDropdown(href="#", role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") ประเภทโครงการ
+        .dropdown-menu(aria-labelledby="navbarDropdown")
+          a.dropdown-item.NavFont(href="/viewallpj") โครงการทั้งหมด
+          a.dropdown-item.NavFont(href="#") โครงการที่เร่งด่วน
+          a.dropdown-item.NavFont(href="#") โครงการเพื่อช่วยแก้ไขปัญหา
+          a.dropdown-item.NavFont(href="#") โครงการในเชิงประดิษฐ์
+      li.nav-item
+        a.nav-link.NavFont(href="#") เกี่ยวกับเรา
+      li.nav-item
+        a.nav-link.NavFont(href="#") คำถามที่พบบ่อย
+      li.nav-item
+        a.nav-link.NavFont(href="#") ข้อกำหนดและเงื่อนไข
+      li.nav-item.dropdown
+        a.nav-link.dropdown-toggle.NavFont#navbarDropdown(href="#", role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") จัดการโครงการ
+        .dropdown-menu(aria-labelledby="navbarDropdown")
+          a.dropdown-item.NavFont(href="/createpj") สร้างโครงการ
+          a.dropdown-item.NavFont(href="#") โปรโมทโครงการ
+      li.nav-item
+        a.nav-link.NavFont(href="#") ถอนเงิน
+      li.nav-item
+        span.align-middle
+          i.fa.fa-search.fa-lg
+      li.nav-item
+        form.form-line.SearchBox
+          input.form-control.mr-sm-2.NavFont(type="search", placeholder="Search...", aria-label="Search")
+      li.nav-item
+        a.nav-link(href="#")
+          span.align-middle
+            i.fa.fa-bell.fa-lg
+      li.nav-item
+        a.nav-link(href="#")
+          span.align-middle
+            i.fa.fa-user-circle.fa-lg
+      li.nav-item
+        a.nav-link.LoginButton(href="/signin") Login
+
+<!--body-->
+.container
+  br
+  br
+  .row.justify-content-center
+    .col-7
+      h1 ยุติโครงการ
+
+<!--Select projects (drop down list)-->
+.container
+  br
+  br
+  .row.justify-content-center
+    .col-0
+        h2 เลือกโครงการ
+        br
+
+.container
+  .row.justify-content-center
+    .col-0
+    select#SelectProjectToDelete(oninput="this.className = \'\'", name="pjbanktype")
+      option#100 โครงการระดมทุนซื้อเครื่องมือการแพทย์เพื่อบริจาคให้โรงพยาบาล A
+      option#200 โครงการรวมเงินเพื่อซื้ออาหารให้คนไร้บ้าน
+      option#300 โครงการระดมทุนจ่ายค่ารักษาพยาบาลแมวจรจัด
+    br
+    br
+    .row.justify-content-center
+      .col-1
+        input.DeleteProjectButton(type="submit", value="ยืนยัน")
+
+footer.bg-light
+  .container
+    .row
+      .col-sm
+        h4 Footer
+        br
+        h6 test footer
+      .col-sm
+        h4 Test
+        br
+        h6 test footer
+      .col-sm
+        h4 Test
+        br
+        h6 test footer
+  .text-center.p-3(style='background-color: rgba(0, 0, 0, 0.2)')
+    | &copy; 2021 Copyright:
+    a.text-dark(href='https://Sharitys.com/') Sharitys.com
+script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')

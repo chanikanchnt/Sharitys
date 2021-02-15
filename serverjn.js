@@ -54,7 +54,11 @@ app.get('/editpj', (req,res) => {
 }) 
 
 app.get('/deletepj', (req,res) => {
-    res.render('Delete_Project')
+    res.render('Delete_Project_Ad')
+}) 
+
+app.get('/deletepjfd', (req,res) => {
+    res.render('Delete_Project_Fd')
 }) 
 
 app.get('/', (req,res) => {

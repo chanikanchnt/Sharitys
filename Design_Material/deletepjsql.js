@@ -18,6 +18,17 @@ sql.connect(dbConfig,function(err){
     if (err) console.log(err);
 })
 
+router.get('/fdrequest/:num', function (req, res) { //Success (Can really delete)
+    sql.connect(dbConfig).then(() => {
+        //return sql.query("DELETE FROM shorttest WHERE num = " + req.params.num);
+        return sql.query("UPDATE shorttest SET pjstatus = 'pending for termination' WHERE num = " + req.params.num);
+    }).then(result => {
+        res.status(200).send("Project Termination Request Submitted Successfully.");
+    }).catch(err => {
+        res.status(500).send("Something Went Wrong !!!");
+    })
+});
+
 router.get('/admincf/:num', function (req, res) { //Success (Can really delete)
     sql.connect(dbConfig).then(() => {
         //return sql.query("DELETE FROM shorttest WHERE num = " + req.params.num);

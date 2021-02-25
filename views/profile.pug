@@ -4,13 +4,23 @@ html
         script(src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js")
         script
             include firebaseConfig.js
+        script
+            include profile.js
     body
-        h1 Profile page
-        button#edit-profile Edit
+        h1 My profile
         #profile
+            label(for="username") Username  
             #username
+            label(for="email") Email 
             #email
-            #profile-picture
+            label(for="profile-picture") Profile image 
+            br
+            img#profile-picture(alt='profile image')
+            br
+            label(for="phone-number") Phone 
             #phone-number
+            label(for="address") Address
             #address
-        
+            #uid 
+
+        button#edit-profile Edit profile

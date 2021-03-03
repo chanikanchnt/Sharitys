@@ -11,7 +11,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         document.getElementById('username').textContent = name;
         document.getElementById('email').textContent = email;
         document.getElementById('profile-picture').src = photoUrl;
-        document.getElementById('uid').textContent = uid;
+        // document.getElementById('uid').textContent = uid;
 
         document.getElementById('edit-profile').addEventListener('click', function(){
             // user.updateProfile({

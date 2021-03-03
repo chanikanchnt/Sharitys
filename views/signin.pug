@@ -13,15 +13,41 @@ html
                     // User successfully signed in.
                     // Return type determines whether we continue the redirect automatically
                     // or whether we leave that to developer to handle.
-                    return true;
+                        console.log("in callback")
+                        var user = authResult.user
+                        user.getIdToken()
+                            .then((idToken) => {
+                                //- setClaims(idToken)
+                                $.post(
+                                '/auth/setCustomClaims',
+                                {
+                                    idToken: idToken
+                                },
+                                (data, status) => {
+                                    // This is not required. You could just wait until the token is expired
+                                    // and it proactively refreshes.
+                                    console.log(data)
+                                    if(status == 'success' && data){
+                                        const json = JSON.parse(data)
+                                        if(json && json.status == 'success'){
+                                            // Force token refresh. The token claims will contain the additional claims.
+                                            user.getIdToken(true)
+                                        }
+                                    }
+                                }
+                            )
+                            }).catch((error) => {
+                                console.log(error)
+                            })
+                        return true;
                     },
                     uiShown: function() {
-                    // The widget is rendered.
-                    // Hide the loader.
-                    document.getElementById('loader').style.display = 'none';
+                        // The widget is rendered.
+                        // Hide the loader.
+                        document.getElementById('loader').style.display = 'none';
                     }
                 },
-                signInSuccessUrl: '/signinsuccess',
+                signInSuccessUrl: '/auth/redirect',
                 // Opens IDP Providers sign-in flow in a popup.
                 signInFlow: 'popup',
                 signInOptions: [ 
@@ -46,7 +72,6 @@ html
             ui.start('#firebaseui-auth-container', uiConfig);
 
     body
-        //- h1(align='center') Sharitys sign in page
         div(id='firebaseui-auth-container')
         div(id='loader') loading...
         

@@ -2,7 +2,8 @@
  * Redirects to the FirebaseUI widget.
  */
 var signInWithRedirect = function() {
-  window.location.assign('/signin');
+  window.location.assign('/auth/signin');
+
 };
 
 /**

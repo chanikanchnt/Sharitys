@@ -1,0 +1,29 @@
+html
+    head
+        title Sharitys - donate
+        //- script(src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js")
+        //- script
+        //-     include firebaseConfig.js
+        script(src="https://cdn.omise.co/omise.js") 
+        script
+            include omise.js
+        
+    body        
+        form#donateForm(action="/charge", method="post") 
+            input#OmiseToken(type="hidden") 
+            input#OmiseSource(type="hidden")
+            button#donateButton(type="submit") Donate
+        
+
+
+//- form#donateForm(action="/charge", method="post") 
+        //-     script(type="text/javascript", src="https://cdn.omise.co/omise.js") 
+        //-         data-key="pkey_test_5n25ayrybt8m94e2yfr"
+        //-         data-amount="100"
+        //-         //- data-button-label="Donate"
+        //-         data-currency="THB"
+        //-         data-default-payment-method="credit_card"
+        //-         //- data-frame-label="Sharitys"
+        //-         //- data-locale="th"
+        //-         data-other-payment-methods="internet_banking","truemoney"
+        //-         data-submit-label="Donate"

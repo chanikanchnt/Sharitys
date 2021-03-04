@@ -7,6 +7,7 @@ const app = express();
 
 const auth = require("./auth")
 const ad = require("./ad")
+const omise_node = require("./omise-node")
   
 // app.use(cookieParser()); 
 app.use(bodyParser.urlencoded({extended: false}))
@@ -14,6 +15,7 @@ app.use(bodyParser.json());
 
 app.use('/auth', auth)
 app.use('/ad', ad)
+app.use('/omise', omise_node)
 
 app.set('views', __dirname + '/views')
 app.set('view engine', 'pug')
